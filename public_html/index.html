@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Log in | iActivity</title>
+	<!-- Materialize fonts and css -->
+	<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+	<link type="text/css" rel="stylesheet" href="css/index-style.css" />
+	<link rel="shortcut icon" type="image/x-icon" href="icon/favicon.ico">
+
+</head>
+
+<body>
+
+	<div class="navbar-fixed">
+		<nav>
+			<div class="nav-wrapper indigo">
+				<a href="main.html" class="brand-logo">
+					<img id="logo" src="images/iactivity-logo.png" alt="iActivity logo" />iActivity</a>
+				<ul class="right hide-on-med-and-down">
+					<li><a id="registrate" >Registrate</a></li>
+					<li><a href="about.html">About</a></li>
+				</ul>
+			</div>
+		</nav>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col s12 l7">
+				<div class="card white">
+					<div class="card-content">
+						<span class="card-title indigo-text">Log In</span>
+						<div class="row">
+							<div class="col s12 l12">
+								<div class="input-field col s11">
+									<i class="material-icons prefix orange-text accent-2">account_circle</i>
+									<input id="email" type="email" class="validate">
+									<label class="orange-text accent-2" for="email">E-Mail</label>
+								</div>
+							</div>
+							<div class="col s12 l12">
+								<div class="input-field col s11">
+									<i class="material-icons prefix orange-text accent-2">vpn_key</i>
+									<input id="password" type="password" class="validate">
+									<label class="orange-text accent-2" for="password">Password</label>
+								</div>
+							</div>
+
+						</div>
+					</div>
+
+					<div class="card-action right-align">
+						<a class="" href="main.html">Log in</a>
+						<!-- <a href="#">This is a link</a> -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Materialize js -->
+	<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript" src="js/materialize.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/bootbox.min.js"></script>
+	<!-- <script type="text/javascript" src="js/validations.js"></script> -->
+	<script>
+		$('.datepicker').pickadate({
+			selectMonths: true, // Creates a dropdown to control month
+			selectYears: 50 // Creates a dropdown of 15 years to control year
+		});
+		$(document).on("click", "#registrate", function() {
+			bootbox.dialog({
+				title: "Registrate",
+				message: '<div class="row">' +
+					'<form id="reg-form" class="col s12" action="php/registro.php">' +
+					'<div class="row">' +
+					'<div class="col s12 l6">' +
+					'<div class="input-field col s12">' +
+					'<input name="fname" id="first-name" type="text" class="validate">' +
+					'<label class="orange-text accent-2" for="first-name">First Name</label>' +
+					'</div>' +
+					'</div>' +
+					'<div class="col s12 l6">' +
+					'<div class="input-field col s12">' +
+					'<input name="lname" id="last-name" type="text" class="validate">' +
+					'<label class="orange-text accent-2" for="last-name">Last Name</label>' +
+					'</div>' +
+					'</div>' +
+					'<div class="col s12 l6">' +
+					'<div class="input-field col s12 ">' +
+					'<input name="emailr" id="email-reg" type="email" class="validate">' +
+					'<label class="orange-text accent-2" for="email-reg">E-Mail</label>' +
+					'</div>' +
+					'</div>' +
+					'<div class="col s12 l6">' +
+					'<div class="input-field col s12">' +
+					'<input name="passr" id="password-reg" type="password" class="validate">' +
+					'<label class="orange-text accent-2" for="password-reg">Password</label>' +
+					'</div>' +
+					'</div>' +
+					'<div class="col s12 l6">' +
+					'<div class="input-field col s12">' +
+					'<input name="bthdt" id="birthday" type="date" class="datepicker picker_input">' +
+					'<label for="birthday" class="active orange-text accent-2">Birthdate</label>' +
+					'</div>' +
+					'</div>' +
+					'<div class="col s12 l6">' +
+					'<div class="input-field col s12">' +
+					'<input name="country" id="country" type="text" class="validate">' +
+					'<label class="orange-text accent-2" for="country">Country</label>' +
+					'</div>' +
+					'</div>' +
+					'<div class="col s12 l6">' +
+					'<div class="input-field col s12">' +
+					'<input name="state" id="state" type="text" class="validate">' +
+					'<label class="orange-text accent-2" for="state">State</label>' +
+					'</div>' +
+					'</div>' +
+					'<div class="col s12 l6">' +
+					'<div class="input-field col s12">' +
+					'<input name="college" id="college" type="text" class="validate">' +
+					'<label class="orange-text accent-2" for="college">College</label>' +
+					'</div>' +
+					'</div>' +
+					'<div class="col s12 l6">' +
+					'<div class="input-field col s12">' +
+					'<input name="career" id="career" type="text" class="validate">' +
+					'<label class="orange-text accent-2" for="career">Career</label>' +
+					'</div>' +
+					'</div>' +
+					'<div class="col s12 l6">' +
+					'<div class="input-field col s12">' +
+					'<input name="semester" id="semester" type="number" class="validate">' +
+					'<label class="orange-text accent-2" for="semester">Semester</label>' +
+					'</div>' +
+					'</div>' +
+					'</div>' +
+					'</form>' +
+					'</div>',
+				onEscape: true,
+				backdrop: true,
+				closeButton: false,
+				buttons: {
+					submit: {
+						label: "Save",
+						className: "btn-success waves-effect",
+						callback: function() {
+							$("#reg-form").submit();
+							Materialize.toast('Successful registration!', 3000);
+						}
+					},
+					alert: {
+						label: "Close",
+						className: "btn-success waves-effect"
+					}
+				}
+			});
+		});
+	</script>
+</body>
+
+</html>
