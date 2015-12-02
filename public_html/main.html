@@ -25,23 +25,32 @@
 			</div>
 		</nav>
 	</div>
-
 	<div class="container">
 		<h1>Today's Activity</h1>
 		<div class="row">
-			<div class="col s12 m5 left">
-				<img id="graphic" src="images/graphic.png">
+			<div class="col s12 m8">
+				<table class="responsive-table striped">
+					<thead>
+						<tr>
+							<th data-field="nombreAct">Nombre Actividad</th>
+							<th data-field="categoria">Categoría</th>
+							<th data-field="horainicio">Inicia</th>
+							<th data-field="horafin">Termina</th>
+							<th data-field="ubicacion">Ubicación</th>
+							<th data-field="frecuencia">Frecuencia Semanal</th>
+							<th data-field="satisfaccion">Satisfacción</th>
+						</tr>
+					</thead>
+					<tbody>
+
+					</tbody>
+				</table>
 			</div>
-			<div class="col s12 m5 right">
-				<img id="calendar" src="images/calendar.jpg">
+			<div class="col s12 m4 right-align">
+				<canvas id="myChart" width="auto" height="auto"></canvas>
 			</div>
 		</div>
-
-
 	</div>
-
-
-
 
 	<div class="fixed-action-btn" style="bottom: 45px; right: 45px;">
 		<a id="add-activity" class="btn-floating btn-large orange accent-2">
@@ -54,6 +63,8 @@
 	<script type="text/javascript" src="js/materialize.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/bootbox.min.js"></script>
+	<script src="js/Chart.min.js"></script>
+	<script type="text/javascript" src="js/main-chart.js"></script>
 	<script>
 		function welcome() {
 			Materialize.toast('Welcome back Diego!', 2000);

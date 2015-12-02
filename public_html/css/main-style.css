@@ -30,3 +30,6 @@ a:focus, a:hover, a:active{
 	width: 40px;
 	margin-right: 10px;
 }
+.col.m6{
+	margin: 10px 0;
+}
