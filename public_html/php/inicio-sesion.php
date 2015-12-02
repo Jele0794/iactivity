@@ -26,7 +26,10 @@ function recogeDato($campo){
  if ($result == true) {
 
 	  while($row = mysql_fetch_array($result)){
-echo "<script language='javascript'>window.location='/../main.html';sessionStorage.nombre='".$row['nombre']."';</script>";
+echo "<script language='javascript'>window.location='/../main.html';sessionStorage.nombre='".$row['nombre']."';sessionStorage.email='".$row['email']."';
+      sessionStorage.nacimiento='".$row['fechaNacimiento']."';sessionStorage.estado='".$row['estado']."';
+      sessionStorage.pais='".$row['pais']."';sessionStorage.universidad='".$row['universidad']."';
+      sessionStorage.carrera='".$row['carrera']."';sessionStorage.semestre='".$row['semestre']."';</script>";
 
  // 	   echo "<script language='javascript'>window.location='/../main.html';sessionStorage.objUsuario=usuario('".$row['nombre']."','".$row['apellidos']."','".$row['email']."','".$row['contrasena']."','".$row['fechaNacimiento']."','','".$row['estado']."','','".$row['carrera']."',".$row['semestre'].");</script>";
  	 }

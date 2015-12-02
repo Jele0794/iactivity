@@ -19,7 +19,7 @@
 					<img id="logo" src="images/iactivity-logo.png" alt="iActivity logo" />iActivity</a>
 				<ul class="right hide-on-med-and-down">
 					<li><a href="main.html">Today</a></li>
-					<li><a href="profile.html" onclick="actualizarInformacion()">Profile</a></li>
+					<li><a href="profile.html">Profile</a></li>
 					<li><a href="about.html">About</a></li>
 				</ul>
 			</div>
@@ -67,53 +67,53 @@
 	<script type="text/javascript" src="js/main-chart.js"></script>
 	<script>
 		function welcome() {
-			Materialize.toast('Welcome back ' + sessionStorage.usuario.getNombre, 2000);
+			Materialize.toast('Welcome back ' + sessionStorage.nombre, 2000);
 		}
 		window.onload = welcome;
 		$(document).on("click", "#add-activity", function() {
 			bootbox.dialog({
 				title: "Registrate an Activity",
-				message: '<form>' +
+				message: '<form id="form_Act" action = "php/registroActividad.php">' +
 					'<div class="row">' +
 					'<div class="col s12 l10">' +
 					'<div class="input-field col s12">' +
-					'<input id="act-name" type="text" class="validate">' +
+					'<input id="act-name" name="act-name" type="text" class="validate">' +
 					'<label for="act-name">Activity Name</label>' +
 					'</div>' +
 					'</div>' + 				
 					'<div class="col s12 l6">' +
 					'<div class="input-field col s12">' +
-					'<input id="act-category" type="text" class="validate">' +
+					'<input id="act-category" name="act-category" type="text" class="validate">' +
 					'<label for="act-category">Category</label>' +
 					'</div>' +
 					'</div>' +
 					'<div class="col s12 l6">' +
 					'<div class="input-field col s12">' +
-					'<input id="act-date" type="date" class="datepicker picker_input">' +
+					'<input id="act-date" name="act-date" type="date" class="datepicker picker_input">' +
 					'<label for="act-date" class="active">Activity Date</label>' +
 					'</div>' +
 					'</div>' +
 					'<div class="col s12 l6">' +
 					'<div class="input-field col s12 ">' +
-					'<input id="start-time" type="time" class="validate">' +
+					'<input id="start-time" name="start-time" type="time" class="validate">' +
 					'<label for="start-time" class="active">Start Time</label>' +
 					'</div>' +
 					'</div>' +
 					'<div class="col s12 l6">' +
 					'<div class="input-field col s12 ">' +
-					'<input id="fin-time" type="time" class="validate">' +
+					'<input id="fin-time" name="fin-time" type="time" class="validate">' +
 					'<label for="fin-time" class="active">Finish Time</label>' +
 					'</div>' +
 					'</div>' +
 					'<div class="col s12 l6">' +
 					'<div class="input-field col s12">' +
-					'<input id="Location" type="text" class="validate">' +
+					'<input id="Location" name="location" type="text" class="validate">' +
 					'<label for="Location">Location</label>' +
 					'</div>' +
 					'</div>' +
 					'<div class="col s12 l6">' +
 					'<div class="input-field col s12">' +
-					'<input id="frequency" type="number" class="validate">' +
+					'<input id="frequency" name = "frequency" type="number" class="validate">' +
 					'<label for="frequency">Frequency (a week)</label>' +
 					'</div>' +
 					'</div>' +
@@ -121,7 +121,7 @@
 					'<div class="input-field col s12">' +
 					'<label for="Satisfaction" class="active">Satisfaction</label>' +
 					'<p class="range-field">' +
-					'<input type="range" id="test5" min="1" max="5" />' +
+					'<input type="range" id="test5" name ="range" min="1" max="5" />' +
 					'</p>' +
 					'</div>' +
 					'</div>' +
@@ -135,7 +135,10 @@
 						label: "Save",
 						className: "btn-success",
 						callback: function() {
+							$("#form_Act").submit();
 							Materialize.toast('Successful activity registration!', 3000);
+
+
 						}
 					},
 					alert: {
