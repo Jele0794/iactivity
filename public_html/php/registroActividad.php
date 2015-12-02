@@ -8,7 +8,8 @@ function recogeDato($campo){
  $user = "jjjsyste_jele";
  $password = "jjjsystems.jele.12";
 
- $usuario = recogeDato();
+ //$usuario = $_GET['user'];
+ echo '<script type="text/javascript">alert('.$usuario.')</script>';
  $nombre = recogeDato('act-name');
  $category = recogeDato('act-category');
  $date = recogeDato('act-date');
@@ -26,8 +27,8 @@ function recogeDato($campo){
  }
  $sql1 = "INSERT INTO ACTIVIDAD (nombre, categoria ) VALUES ('$nombre', '$category')";
  $sql = "INSERT INTO HORARIO (nombreUsuario, nombre, fecha, horaInicial, ubicacion, horaFinal, frecuenciaSemanal, satisfaccion )
-          VALUES ('$nombre', '$date', '$start', '$location', '$end', '$frequency', '$range')";
-
+          VALUES ('$usuario','$nombre', '$date', '$start', '$location', '$end', '$frequency', '$range')";
+ echo "<script>console.log('$usuario')</script>";
  if (mysql_query($sql1) == TRUE && mysql_query($sql) == TRUE) {
  	      //echo "<script languaje='javascript'>alert('Registro Existoso!.')</script>";
          echo "<script language='javascript'>window.location='/../main.html'</script>";

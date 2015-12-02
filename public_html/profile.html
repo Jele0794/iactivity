@@ -125,7 +125,7 @@
 	<script type="text/javascript" src="js/bootbox.min.js"></script>
 	<script>
 	 window.onload = function(){
-	  $("#nombreP").html(sessionStorage.nombre);
+	  $("#nombreP").html(sessionStorage.nombre + " " + sessionStorage.apellidos);
 		$("#emailP").html(sessionStorage.email);
 		$("#nacimientoP").html(sessionStorage.nacimiento);
 		$("#ubicacionP").html(sessionStorage.estado + ", " + sessionStorage.pais);

@@ -68,7 +68,7 @@
 	<script type="text/javascript" src="js/main-chart.js"></script>
 	<script>
 		function welcome() {
-			Materialize.toast('Welcome back ' + sessionStorage.nombre, 2000);
+			Materialize.toast('Welcome! ' + sessionStorage.nombre, 2000);
 		}
 		window.onload = welcome;
 		$(document).on("click", "#add-activity", function() {
@@ -79,7 +79,7 @@
 					'<div class="col s12 l12">' +
 					'<div class="col s12 l12">' +
 					'<div class="input-field col s12">' +
-					'<input disabled value="Edmundo" id="f-name" name="f-name" type="text" class="center-align">' + '</div>' +
+					'<input disabled value="" id="f-name" name="f-name" type="text" class="center-align">' + '</div>' +
 					'</div>' +
 					'<div class="col s12 l12">' +
 					'<div class="input-field col s12">' +
@@ -151,6 +151,7 @@
 					}
 				}
 			});
+			$("#f-name").attr("value",sessionStorage.email);
 		});
 	</script>
 </body>
