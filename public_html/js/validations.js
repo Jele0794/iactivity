@@ -3,7 +3,7 @@ var email = $("#email-reg").val();
 var password = $("#password-reg").val();
 
 $("input#semester").bind('input propertychange', function(){
-	if(semester < 0 || semester > 12){
+	if(semester < 0 && semester > 12){
 		$("#semester").addClass("invalid");
 	}
 });
