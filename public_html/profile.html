@@ -17,7 +17,8 @@
 	<div class="navbar-fixed">
 		<nav>
 			<div class="nav-wrapper indigo">
-				<a href="main.html" class="brand-logo"><img id="logo" src="images/iactivity-logo.png" alt="iActivity logo" />iActivity</a>
+				<a href="main.html" class="brand-logo">
+					<img id="logo" src="images/iactivity-logo.png" alt="iActivity logo" />iActivity</a>
 				<ul class="right hide-on-med-and-down">
 					<li><a href="main.html">Today</a></li>
 					<li><a id="registrate" href="profile.html" onclick="actualizarInformacion()">Profile</a></li>
@@ -37,8 +38,12 @@
 					<div class="col s12">
 						<h5>Contact</h5>
 						<ul>
-							<li><span class="valign-wrapper"><i class="material-icons valign">email</i></span></li>
-							<li><span class="valign-wrapper"><i class="material-icons valign">location_on</i>Puebla, Pue. México</span></li>
+							<li>
+								<span class="valign-wrapper"><i class="material-icons valign">email</i></span>
+							</li>
+							<li>
+								<span class="valign-wrapper"><i class="material-icons valign">location_on</i>Puebla, Pue. México</span>
+							</li>
 						</ul>
 					</div>
 				</div>
@@ -48,7 +53,8 @@
 					<div class="col s12">
 						<h5><i class="material-icons valign">equalizer</i>About</h5>
 						<p>
-
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ut erat vel nulla lobortis vestibulum. Fusce commodo condimentum quam vitae iaculis. In condimentum sodales enim. Quisque et enim a augue tempor rhoncus eget vel mauris. Duis fringilla
+							sed lectus id rutrum. Sed tincidunt convallis iaculis. Pellentesque ultrices varius nulla, at convallis arcu commodo sed. Duis quis accumsan orci. Ut malesuada ipsum vel mi aliquet, at fermentum est porta.
 						</p>
 					</div>
 					<div class="col s12">
@@ -83,7 +89,7 @@
 									<td>
 										<b>Location</b>
 									</td>
-									<td id = "ubicacionP">
+									<td id="ubicacionP">
 
 									</td>
 								</tr>
@@ -124,15 +130,16 @@
 	<script src="js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/bootbox.min.js"></script>
 	<script>
-	 window.onload = function(){
-	  $("#nombreP").html(sessionStorage.nombre);
-		$("#emailP").html(sessionStorage.email);
-		$("#nacimientoP").html(sessionStorage.nacimiento);
-		$("#ubicacionP").html(sessionStorage.estado + ", " + sessionStorage.pais);
-		$("#universidadP").html(sessionStorage.universidad);
-		$("#carreraP").html(sessionStorage.carrera);
-		$("#semestreP").html(sessionStorage.semestre);
-	}</script>
+		window.onload = function() {
+			$("#nombreP").html(sessionStorage.nombre + " " + sessionStorage.apellidos);
+			$("#emailP").html(sessionStorage.email);
+			$("#nacimientoP").html(sessionStorage.nacimiento);
+			$("#ubicacionP").html(sessionStorage.estado + ", " + sessionStorage.pais);
+			$("#universidadP").html(sessionStorage.universidad);
+			$("#carreraP").html(sessionStorage.carrera);
+			$("#semestreP").html(sessionStorage.semestre);
+		}
+	</script>
 </body>
 
 </html>
