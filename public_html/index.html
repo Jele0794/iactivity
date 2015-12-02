@@ -67,6 +67,7 @@
 	<script src="js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/bootbox.min.js"></script>
 	<script type="text/javascript" src="js/usuario.js"></script>
+	<script language="php" src="php/registro.php"></script>
 	<!-- <script type="text/javascript" src="js/validations.js"></script> -->
 	<script>
 		$('.datepicker').pickadate({
@@ -77,7 +78,7 @@
 			bootbox.dialog({
 				title: "Registrate",
 				message: '<div class="row">' +
-					'<form id="reg-form" class="col s12" action="js/usuario.js">' +
+					'<form id="reg-form" class="col s12" action="php/registro.php">' +
 					'<div class="row">' +
 					'<div class="col s12 l6">' +
 					'<div class="input-field col s12">' +
@@ -150,8 +151,9 @@
 						label: "Save",
 						className: "btn-success waves-effect",
 						callback: function() {
-							// $("#reg-form").submit();
 							hola();
+							$("#reg-form").submit();
+
 							Materialize.toast('Successful registration!', 3000);
 						}
 					},

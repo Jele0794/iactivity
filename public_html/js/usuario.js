@@ -1,3 +1,5 @@
+var _nombre_, _apellidos_, _email_, _password_, _nacimiento_, _pais_, _estado_,
+_universidad_, _carrera_, _semestre_;
 function hola() {
 	nombre_ = $("#first-name").valueOf();
 	apellidos_ = $("#last-name").valueOf();
@@ -17,7 +19,19 @@ function hola() {
 	usuario1.setEstado(state_.val());
 	usuario1.setUniversidad($("#college").valueOf().val());
 	usuario1.setCarrera($("#career").valueOf().val());
-	usuario1=setSemestre($("#semester").valueOf().val());
+	usuario1.setSemestre($("#semester").valueOf().val());
+
+	_nombre_ = usuario1.getNombre();
+	_apellidos_ = usuario1.getApellidos();
+	_email_ = usuario1.getEmail();
+	_password_ = usuario1.getPassword();
+	_nacimiento_ = usuario1.getNacimiento();
+	_pais_ = usuario1.getPais();
+	_estado_ = usuario1.getEstado();
+	_universidad_ = usuario1.getUniversidad();
+	_carrera_ = usuario1.getCarrera();
+	_semestre_ = usuario1.getSemestre();
+
 	console.log(usuario1.getNombre());
 	console.log(usuario1.getApellidos());
 	console.log(usuario1.getEmail());
@@ -109,6 +123,9 @@ var usuario = (function(_nombre, _apellidos, _email, _password, _nacimiento, _pa
 		},
 		getSemestre: function(){
 			return semestre;
+		},
+		getPassword: function(){
+			return password;
 		}
 	}
 
