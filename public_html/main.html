@@ -19,7 +19,7 @@
 					<img id="logo" src="images/iactivity-logo.png" alt="iActivity logo" />iActivity</a>
 				<ul class="right hide-on-med-and-down">
 					<li><a href="main.html">Today</a></li>
-					<li><a href="profile.html">Profile</a></li>
+					<li><a href="profile.html" onclick="actualizarInformacion()">Profile</a></li>
 					<li><a href="about.html">About</a></li>
 				</ul>
 			</div>
@@ -56,7 +56,7 @@
 	<script type="text/javascript" src="js/bootbox.min.js"></script>
 	<script>
 		function welcome() {
-			Materialize.toast('Welcome back Diego!', 2000);
+			Materialize.toast('Welcome back ' + sessionStorage.usuario.getNombre, 2000);
 		}
 		window.onload = welcome;
 		$(document).on("click", "#add-activity", function() {

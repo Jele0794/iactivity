@@ -20,7 +20,7 @@
 				<a href="main.html" class="brand-logo"><img id="logo" src="images/iactivity-logo.png" alt="iActivity logo" />iActivity</a>
 				<ul class="right hide-on-med-and-down">
 					<li><a href="main.html">Today</a></li>
-					<li><a id="registrate" href="profile.html">Profile</a></li>
+					<li><a id="registrate" href="profile.html" onclick="actualizarInformacion()">Profile</a></li>
 					<li><a href="about.html">About</a></li>
 				</ul>
 			</div>
@@ -36,8 +36,7 @@
 					<div class="col s12">
 						<h5>Contact</h5>
 						<ul>
-							<li><span class="valign-wrapper"><i class="material-icons valign">phone</i>2223-456-3234</span></li>
-							<li><span class="valign-wrapper"><i class="material-icons valign">email</i>diego@udlap.mx</span></li>
+							<li><span class="valign-wrapper"><i class="material-icons valign">email</i></span></li>
 							<li><span class="valign-wrapper"><i class="material-icons valign">location_on</i>Puebla, Pue. México</span></li>
 						</ul>
 					</div>
@@ -48,7 +47,7 @@
 					<div class="col s12">
 						<h5><i class="material-icons valign">equalizer</i>About</h5>
 						<p>
-							Sed eu est vulputate, fringilla ligula ac, maximus arcu. Donec sed felis vel magna mattis ornare ut non turpis. Sed id arcu elit. Sed nec sagittis tortor. Mauris ante urna, ornare sit amet mollis eu, aliquet ac ligula. Nullam dolor metus, suscipit ac imperdiet nec, consectetur sed ex. Sed cursus porttitor leo.
+
 						</p>
 					</div>
 					<div class="col s12">
@@ -59,56 +58,56 @@
 									<td>
 										<b>Full Name</b>
 									</td>
-									<td>
-										Diego Rodriguez
+									<td id="nombreP">
+
 									</td>
 								</tr>
 								<tr>
 									<td>
 										<b>E-Mail</b>
 									</td>
-									<td>
-										diego@udlap.mx
+									<td id="emailP">
+
 									</td>
 								</tr>
 								<tr>
 									<td>
 										<b>Birthday</b>
 									</td>
-									<td>
-										26/04/5000 B.C.
+									<td id="nacimientoP">
+
 									</td>
 								</tr>
 								<tr>
 									<td>
 										<b>Location</b>
 									</td>
-									<td>
-										Puebla, Pue. México
+									<td id = "ubicacionP">
+
 									</td>
 								</tr>
 								<tr>
 									<td>
 										<b>College</b>
 									</td>
-									<td>
-										Universidad De Las Américas Puebla
+									<td id="universidadP">
+
 									</td>
 								</tr>
 								<tr>
 									<td>
 										<b>Career</b>
 									</td>
-									<td>
-										Systems Engineering
+									<td id="carreraP">
+
 									</td>
 								</tr>
 								<tr>
 									<td>
-										<b>Smester</b>
+										<b>Semester</b>
 									</td>
-									<td>
-										7th
+									<td id="semestreP">
+
 									</td>
 								</tr>
 							</tbody>
@@ -123,6 +122,16 @@
 	<script type="text/javascript" src="js/materialize.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/bootbox.min.js"></script>
+	<script>
+	 window.onload = function(){
+	  $("#nombreP").html(sessionStorage.nombre);
+		$("#emailP").html(sessionStorage.email);
+		$("#nacimientoP").html(sessionStorage.nacimiento);
+		$("#ubicacionP").html(sessionStorage.estado + ", " + sessionStorage.pais);
+		$("#universidadP").html(sessionStorage.universidad);
+		$("#carreraP").html(sessionStorage.carrera);
+		$("#semestreP").html(sessionStorage.semestre);
+	}</script>
 </body>
 
 </html>

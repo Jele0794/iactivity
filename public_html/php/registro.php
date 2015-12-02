@@ -9,17 +9,16 @@ function recogeDato($campo){
  $user = "jjjsyste_jele";
  $password = "jjjsyst3.2015";
 
-$fname = "<script> document.write(_nombre_)</script>" ;
-echo "nomnre" . $fname;
-$lname = "<script> document.write(_apellidos_)</script>" ;
-$emailr = "<script> document.write(_email_)</script>" ;
-$passr = "<script> document.write(_password_)</script>" ;
-$bthdt = "<script> document.write(_nacimiento_)</script>" ;
-$country = "<script> document.write(_pais_)</script>" ;
-$state = "<script> document.write(_estado_)</script>" ;
-$college = "<script> document.write(_universidad_)</script>" ;
-$career = "<script> document.write(_carrera_)</script>" ;
-$semester = "<script> document.write(_semestre_)</script>" ;
+$fname = recogeDato("fname");
+$lname = recogeDato("lname");
+$emailr = recogeDato("emailr");
+$passr = recogeDato("passr");
+$bthdt = recogeDato("bthdt");
+$country = recogeDato("country");
+$state = recogeDato("state");
+$college = recogeDato("college");
+$career = recogeDato("career");
+$semester = recogeDato("semester");
 
 $con = mysql_connect($hostname, $user, $password) or die("Cannot connect to DB");
 mysql_select_db($dbname) or die ("Cannot connect to DB2");

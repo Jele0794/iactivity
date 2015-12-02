@@ -1,6 +1,4 @@
-var _nombre_, _apellidos_, _email_, _password_, _nacimiento_, _pais_, _estado_,
-_universidad_, _carrera_, _semestre_;
-function hola() {
+function crearUsuario() {
 	nombre_ = $("#first-name").valueOf();
 	apellidos_ = $("#last-name").valueOf();
 	email_ = $("#email-reg").valueOf();
@@ -21,26 +19,16 @@ function hola() {
 	usuario1.setCarrera($("#career").valueOf().val());
 	usuario1.setSemestre($("#semester").valueOf().val());
 
-	_nombre_ = usuario1.getNombre();
-	_apellidos_ = usuario1.getApellidos();
-	_email_ = usuario1.getEmail();
-	_password_ = usuario1.getPassword();
-	_nacimiento_ = usuario1.getNacimiento();
-	_pais_ = usuario1.getPais();
-	_estado_ = usuario1.getEstado();
-	_universidad_ = usuario1.getUniversidad();
-	_carrera_ = usuario1.getCarrera();
-	_semestre_ = usuario1.getSemestre();
-
-	console.log(usuario1.getNombre());
-	console.log(usuario1.getApellidos());
-	console.log(usuario1.getEmail());
-	console.log(usuario1.getNacimiento());
-	console.log(usuario1.getPais());
-	console.log(usuario1.getEstado());
-	console.log(usuario1.getUniversidad());
-	console.log(usuario1.getCarrera());
-	console.log(usuario1.getSemestre());
+	sessionStorage.nombre = usuario1.getNombre();
+	sessionStorage.apellidos = usuario1.getApellidos();
+	sessionStorage.email = usuario1.getEmail();
+	sessionStorage.password = usuario1.getPassword();
+	sessionStorage.nacimiento = usuario1.getNacimiento();
+	sessionStorage.pais = usuario1.getPais();
+	sessionStorage.estado = usuario1.getEstado();
+	sessionStorage.universidad = usuario1.getUniversidad();
+	sessionStorage.carrera = usuario1.getCarrera();
+	sessionStorage.semestre = usuario1.getSemestre();
 
 }
 
