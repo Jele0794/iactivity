@@ -7,7 +7,7 @@ function recogeDato($campo){
  $hostname = "localhost";
  $dbname = "jjjsyste_iActivityDB";
  $user = "jjjsyste_jele";
- $password = "jjjsyst3.2015";
+ $password = "jjjsystems.jele.12";
 
 $fname = recogeDato("fname");
 $lname = recogeDato("lname");
@@ -26,9 +26,9 @@ mysql_select_db($dbname) or die ("Cannot connect to DB2");
 if (!$con) {
     die('No pudo conectarse: ' . mysql_error());
 }
-$sql = "INSERT INTO USUARIO (contrasena, nombre, apellidos, fechaNacimiento, email, estado, carrera, semestre ) VALUES ('$passr', '$fname', '$lname', '$bthdt', '$emailr', '$state', '$career', $semester)";
+$sql = "INSERT INTO USUARIO (contrasena, nombre, apellidos, fechaNacimiento, email, estado, carrera, semestre, pais, universidad ) VALUES ('$passr', '$fname', '$lname', '$bthdt', '$emailr', '$state', '$career', $semester, '$country', '$college')";
 
-if (mysql_query($sql) === TRUE) {
+if (mysql_query($sql) == TRUE) {
 	      //echo "<script languaje='javascript'>alert('Registro Existoso!.')</script>";
         echo "<script language='javascript'>window.location='/../main.html'</script>";
 } else {
